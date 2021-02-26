@@ -7,10 +7,10 @@ const CardList = ({ orders }) => {
             {orders.map((order, i) => {
                 return <Card
                     key={i}
-                    id={orders[i].OrderID}
-                    received={orders[i].DateReceived}
-                    status={orders[i].OrderStatus}
-                    service={orders[i].Service} />
+                    id={orders[i].id}
+                    name={orders[i].name}
+                    email={orders[i].email}
+                    address={orders[i].address.street} />
             })}
         </div>
     )
