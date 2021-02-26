@@ -2,13 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import CardList from './CardList';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
-import { orders } from "./orders";
 
 ReactDOM.render(
-  <CardList orders={orders} />
+  <App />
   ,
   document.getElementById('root')
 );

@@ -9,7 +9,8 @@ const CardList = ({ orders }) => {
                     key={i}
                     id={orders[i].OrderID}
                     received={orders[i].DateReceived}
-                    status={orders[i].OrderStatus} />
+                    status={orders[i].OrderStatus}
+                    service={orders[i].Service} />
             })}
         </div>
     )
