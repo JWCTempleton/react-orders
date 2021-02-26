@@ -23,7 +23,7 @@ class App extends Component {
     })
     return (
       <div className="tc" >
-        <h1 className='tc'>Order List</h1>
+        <h1 className='tc f1 order-header'>Order List</h1>
         <SearchBox searchChange={this.onSearchChange} />
         <CardList orders={filteredOrders} />
       </div>
