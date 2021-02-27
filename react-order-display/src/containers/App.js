@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import CardList from "./CardList";
-import SearchBox from "./SearchBox";
-import Scroll from "./Scroll";
-
-import './App.css';
+import CardList from "../components/CardList";
+import SearchBox from "../components/SearchBox";
+import Scroll from "../components/Scroll";
+import '../containers/App.css';
 
 
 class App extends Component {
@@ -28,8 +27,9 @@ class App extends Component {
     this.setState({ searchfield: event.target.value })
   }
   render() {
-    const filteredOrders = this.state.orders.filter(users => {
-      return users.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+    const { orders, searchfield } = this.state;
+    const filteredOrders = orders.filter(users => {
+      return users.name.toLowerCase().includes(searchfield.toLowerCase());
     })
     return (
       <div className="tc" >
